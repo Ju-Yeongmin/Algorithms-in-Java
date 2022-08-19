@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Baekjoon2884 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int H = sc.nextInt();
+		int M = sc.nextInt();
+		
+		if (H == 0 && M < 45) {
+			H += 24;
+		}
+		
+		int t = H*60 + M;
+		t = t - 45;
+		
+		H = t / 60;
+		M = t % 60;
+		
+		System.out.printf("%d %d", H, M);
+	}
+}
