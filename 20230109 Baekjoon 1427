@@ -1,0 +1,22 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.Collections;
+
+public class Main {
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String line = br.readLine();
+        char[] arr = line.toCharArray();
+        Integer[] n = new Integer[arr.length];
+        for (int i=0; i<arr.length; i++) {
+            n[i]=Integer.parseInt(Character.toString(arr[i]));
+        }
+        Arrays.sort(n, Collections.reverseOrder());
+        StringBuilder sb = new StringBuilder();
+        for (int x : n) {
+            sb.append(x);
+        }
+        System.out.println(sb);
+    }
+}
